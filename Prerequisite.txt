@@ -1,0 +1,25 @@
+1. Develop End to End Application with Flask/Django or any framework with frontend.
+2. Run the code in Local Machine
+3. Create AWS free account
+4. Create EC2 instance and generate & download security key
+5. Download Putty , Putty gen, Winscp
+6. Open putty gen and create security key in ppk extension
+7. Open putty, put hostname from aws instance->(ipv4 address), 
+data->(username), authentication->(upload pem security key and login) 
+8. open Winscp and put hostname from aws instance->(ipv4 address), 
+authentication->(upload pem security key and login), generate name and save and login.
+9. Now you can transfer the local file to virtual machine.
+10. once the file is transfer now in virtual machine install pip and requirement.txt file.
+11. Now go back to AWS and create security groups inbound parameters set to (all traffic & IPV4 )
+12. Once security group is created go back to all instance and select the instance which you've
+created new one and change the security group.
+13. Open Virtual Machine and execute python3 app.py cmd.
+14. open aws and connect your instance and copy the link and paste it in a new browser followed with (:8080) port.
+15. your ml model is deployed.
+ 
+
+sudo apt-get update && sudo apt-get install python3-pip
+
+pip freeze requirements.txt
+
+pip install -r requirements.txt
